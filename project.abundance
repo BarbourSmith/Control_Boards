@@ -11269,8 +11269,8 @@
                 },
                 {
                   "atomType": "ExtractTag",
-                  "x": 0.8492063492063493,
-                  "y": 0.7855153203342619,
+                  "x": 0.8267195767195767,
+                  "y": 0.8412256267409471,
                   "uniqueID": "id-312679",
                   "name": "Extract Tag",
                   "ioValues": [
@@ -11316,6 +11316,52 @@
                       "currentEquation": "-100"
                     }
                   ]
+                },
+                {
+                  "atomType": "Difference",
+                  "x": 0.7652116402116402,
+                  "y": 0.7632311977715878,
+                  "uniqueID": "id-312690",
+                  "ioValues": [
+                    {
+                      "name": "retain",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "remove",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Export",
+                  "x": 0.9226190476190476,
+                  "y": 0.3983286908077995,
+                  "uniqueID": "id-312697",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "File Type",
+                      "ioValue": "STEP",
+                      "currentEquation": "STEP"
+                    },
+                    {
+                      "name": "Resolution (dpi)",
+                      "ioValue": 96
+                    },
+                    {
+                      "name": "Part Name",
+                      "ioValue": "Fan Cooling Substitute",
+                      "currentEquation": "Fan Cooling Substitute"
+                    }
+                  ],
+                  "type": "STEP",
+                  "resolution": 96,
+                  "importIndex": 0,
+                  "partName": "Fan Cooling Substitute"
                 }
               ],
               "allConnectors": [
@@ -11355,14 +11401,9 @@
                   "ap2ID": "id-310458"
                 },
                 {
-                  "ap2Name": "number or geometry",
+                  "ap2Name": "retain",
                   "ap1ID": "id-310458",
-                  "ap2ID": "id-310445"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-310458",
-                  "ap2ID": "id-312679"
+                  "ap2ID": "id-312690"
                 },
                 {
                   "ap2Name": "Shape 1",
@@ -11411,8 +11452,28 @@
                 },
                 {
                   "ap2Name": "geometry",
+                  "ap1ID": "id-312679",
+                  "ap2ID": "id-312697"
+                },
+                {
+                  "ap2Name": "geometry",
                   "ap1ID": "id-312682",
                   "ap2ID": "id-312686"
+                },
+                {
+                  "ap2Name": "remove",
+                  "ap1ID": "id-312686",
+                  "ap2ID": "id-312690"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-312690",
+                  "ap2ID": "id-310445"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-312690",
+                  "ap2ID": "id-312679"
                 }
               ],
               "fileTypeVersion": 1
